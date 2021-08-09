@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: #348fe4;
+@import '~ngx-tethys/styles/main.bundle.scss';
+
+
+html,
+body {
+    height: 100%;
+}

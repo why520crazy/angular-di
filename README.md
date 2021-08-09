@@ -1,1 +1,3 @@
-# angular-di
+# Angular DI playground
+
+> WIP.

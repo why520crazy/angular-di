@@ -1,0 +1,13 @@
+<thy-layout>
+  <thy-header thyTitle="Angular DI">
+    <ng-template #headerContent>
+      <thy-nav thyType="primary" thyHorizontal="center">
+        <a thyNavLink routerLinkActive="active" routerLink="user">User</a>
+        <a thyNavLink routerLinkActive="active" routerLink="heroes">Heroes</a>
+      </thy-nav>
+    </ng-template>
+  </thy-header>
+  <thy-content>
+    <router-outlet></router-outlet>
+  </thy-content>
+</thy-layout>
