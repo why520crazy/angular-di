@@ -4,14 +4,20 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { MultistageModule } from './features/multistage/multistage.module';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { HeroComponent } from './heroes/hero/hero.component';
+import { RootService } from './root.service';
 import { SharedModule } from './shared/shared.module';
+import { StaticService } from './static.service';
 
 @NgModule({
     declarations: [AppComponent, HeroListComponent, HeroComponent],
-    imports: [BrowserModule, CoreModule, AppRoutingModule, SharedModule],
-    providers: [],
+    imports: [BrowserModule, CoreModule, MultistageModule, AppRoutingModule, SharedModule],
+    providers: [
+        // StaticService,
+        // RootService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

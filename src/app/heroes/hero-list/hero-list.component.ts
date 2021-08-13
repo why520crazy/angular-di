@@ -1,4 +1,6 @@
-import { Component, ComponentRef, Directive, ElementRef, forwardRef, Input, OnInit, ReflectiveInjector, ViewContainerRef } from '@angular/core';
+import { Component, ComponentRef, Directive, ElementRef, forwardRef, Input, OnInit, ViewContainerRef } from '@angular/core';
+import { Counter } from '../../core/counter.service';
+import { RootService } from '../../root.service';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -7,7 +9,7 @@ import { HeroService } from '../hero.service';
     templateUrl: './hero-list.component.html',
     styleUrls: ['./hero-list.component.scss'],
     providers: [
-         {
+        {
             provide: 'a',
             useExisting: HeroListComponent
         }
@@ -16,7 +18,13 @@ import { HeroService } from '../hero.service';
 export class HeroListComponent implements OnInit {
     heroes!: Hero[];
 
-    constructor(private heroService: HeroService, private viewContainerRef: ViewContainerRef, private elementRef: ElementRef) {}
+    constructor(
+        private heroService: HeroService,
+        private viewContainerRef: ViewContainerRef,
+        private elementRef: ElementRef,
+        public counter: Counter,
+        public rootService: RootService
+    ) {}
 
     ngOnInit(): void {
         this.heroes = this.heroService.getHeroes();

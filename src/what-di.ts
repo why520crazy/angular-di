@@ -11,11 +11,13 @@ namespace NoDI {
         number!: Number;
         address!: Address;
 
-        constructor() {
-            this.number = new Number('100000');
+        constructor(number: string) {
+            this.number = new Number(number);
             this.address = new Address();
         }
     }
+
+    const postalDetails = new PostalDetails('100000');
 }
 
 namespace DI {
@@ -31,4 +33,3 @@ namespace DI {
         constructor(private number: Number, private address: Address) {}
     }
 }
-

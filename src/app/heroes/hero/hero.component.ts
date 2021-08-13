@@ -26,24 +26,12 @@ const a = {};
 })
 export class HeroComponent implements OnInit {
     constructor(private viewContainerRef: ViewContainerRef, private elementRef: ElementRef, @Inject(a) private nameService: NameService) {
-        debugger;
     }
 
     ngOnInit(): void {
         // console.log(this.nameService.getName());
     }
 }
-
-// class A {
-//     constructor() {
-//         debugger;
-//         const token = forwardRef(() => NameService);
-//         console.log(token);
-//         console.log(token.name);
-//     }
-// }
-
-// new A();
 
 @Injectable()
 class NameService {

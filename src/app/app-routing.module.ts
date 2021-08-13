@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MultistageHomeComponent } from './features/multistage/home/home.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 
 const routes: Routes = [
@@ -12,6 +13,18 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () => import('./features/user/user.module').then((m) => m.UserModule)
     },
+    // {
+    //     path: 'user',
+    //     component: MultistageHomeComponent
+    // },
+    {
+        path: 'multistage',
+        loadChildren: () => import('./features/multistage/multistage.module').then((m) => m.MultistageModule)
+    },
+    // {
+    //     path: 'multistage',
+    //     component: MultistageHomeComponent
+    // },
     {
         path: 'heroes',
         component: HeroListComponent

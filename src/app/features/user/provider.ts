@@ -1,6 +1,8 @@
 import { FactoryProvider, Injectable, InjectionToken } from '@angular/core';
 
-export const TOKEN = new InjectionToken('token');
+// export const TOKEN = new InjectionToken('token');
+export const TOKEN = 'a';
+// export const TOKEN = {};
 
 @Injectable()
 export class Logger {
