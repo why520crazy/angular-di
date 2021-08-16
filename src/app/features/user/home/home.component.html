@@ -1,13 +1,16 @@
-<p>user feature module works!</p>
+<p>User Feature Module!</p>
 
-<p>Provider: {{sample | json}}</p>
+<thy-divider thyText="Provider"></thy-divider>
+{{ sample | json }}
 
-<p *ngIf="message">
-  Message: {{message}}
-</p>
+<ng-container *ngIf="message">
+  <thy-divider thyText="Message"></thy-divider>
+  {{ message || 'None' }}
+</ng-container>
 
-<p>
-  Counter: {{counter | json}}
-</p>
+<thy-divider thyText="Counter"></thy-divider>
+{{ counter | json }}
 
-<p>RootService: {{rootService | json}}</p>
+<thy-divider thyText="RootService"> </thy-divider>
+
+{{ rootService | json }}

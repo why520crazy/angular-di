@@ -1,7 +1,28 @@
-<p>home works!</p>
+<p>Multistage home!</p>
 
-<p>
-  Counter: {{counter | json}}
-</p>
+<thy-divider thyText="Counter"></thy-divider>
+{{ counter | json }}
 
-<p>RootService: {{rootService | json}}</p>
+<thy-divider thyText="RootService"> </thy-divider>
+
+{{ rootService | json }}
+<thy-divider thyText="Self No Data"> </thy-divider>
+<app-resolution-self-no-data></app-resolution-self-no-data>
+
+<thy-divider thyText="Self"> </thy-divider>
+<app-resolution-self></app-resolution-self>
+
+<thy-divider thyText="Skip Self"> </thy-divider>
+<app-resolution-skipself></app-resolution-skipself>
+
+<thy-divider thyText="Host"> </thy-divider>
+<app-resolution-host></app-resolution-host>
+
+<thy-divider thyText="Providing services in @Component()"> </thy-divider>
+<p>Emoji from FlowerService: {{flower.emoji}}</p>
+<p>Emoji from AnimalService: {{animal.emoji}}</p>
+<app-resolution-child>
+  <!-- <app-resolution-inspector></app-resolution-inspector> -->
+</app-resolution-child>
+
+

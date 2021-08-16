@@ -3,7 +3,7 @@ import { AppModule } from '../app.module';
 
 let count = 1;
 @Injectable({
-    providedIn: "any"
+    providedIn: "root"
 })
 export class Logger {
     name = `logger-${count++}`;

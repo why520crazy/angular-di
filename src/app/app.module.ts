@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { Logger } from './core/logger.service';
 import { MultistageModule } from './features/multistage/multistage.module';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { HeroComponent } from './heroes/hero/hero.component';
@@ -16,7 +17,13 @@ import { StaticService } from './static.service';
     imports: [BrowserModule, CoreModule, MultistageModule, AppRoutingModule, SharedModule],
     providers: [
         // StaticService,
-        // RootService
+        // RootService,
+        // {
+        //     provide: Logger,
+        //     useValue: {
+        //         name: 'AppModule provider Logger'
+        //     }
+        // }
     ],
     bootstrap: [AppComponent]
 })

@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MessagesComponent } from './messages/messages.component';
 import { ThyNavModule } from 'ngx-tethys/nav';
 import { ThyLayoutModule } from 'ngx-tethys/layout';
+import { ThyDividerModule } from 'ngx-tethys/divider';
 
-const TETHYS_MODULES = [ThyNavModule, ThyLayoutModule];
+const TETHYS_MODULES = [ThyNavModule, ThyLayoutModule, ThyDividerModule];
 
 @NgModule({
     declarations: [MessagesComponent],
