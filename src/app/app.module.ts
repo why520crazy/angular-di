@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { Logger } from './core/logger.service';
-import { MultistageModule } from './features/multistage/multistage.module';
+// import { MultistageModule } from './features/multistage/multistage.module';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { RootService } from './root.service';
@@ -14,7 +14,7 @@ import { StaticService } from './static.service';
 
 @NgModule({
     declarations: [AppComponent, HeroListComponent, HeroComponent],
-    imports: [BrowserModule, CoreModule, MultistageModule, AppRoutingModule, SharedModule],
+    imports: [BrowserModule, CoreModule, AppRoutingModule, SharedModule],
     providers: [
         // StaticService,
         // RootService,

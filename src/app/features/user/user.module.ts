@@ -42,7 +42,7 @@ import { ProtectedResolversModule } from './protected.module';
         ]),
         CommonModule,
         SharedModule,
-        CoreModule
+        // CoreModule
     ]
 })
 export class UserModule {}

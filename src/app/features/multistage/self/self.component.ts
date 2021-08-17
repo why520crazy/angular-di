@@ -5,7 +5,7 @@ import { FlowerService } from '../flower.service';
     selector: 'app-resolution-self',
     templateUrl: './self.component.html',
     styleUrls: ['./self.component.scss'],
-    // providers: [{ provide: FlowerService, useValue: { emoji: '🌼' } }]
+    providers: [{ provide: FlowerService, useValue: { emoji: '🌼' } }]
 })
 export class SelfComponent implements OnInit {
     constructor(@Optional() @Self() public flower: FlowerService) {}

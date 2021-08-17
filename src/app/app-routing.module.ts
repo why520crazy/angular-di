@@ -21,6 +21,10 @@ const routes: Routes = [
         path: 'multistage',
         loadChildren: () => import('./features/multistage/multistage.module').then((m) => m.MultistageModule)
     },
+    {
+        path: 'hierarchy',
+        loadChildren: () => import('./features/hierarchy/hierarchy.module').then((m) => m.HierarchyModule)
+    },
     // {
     //     path: 'multistage',
     //     component: MultistageHomeComponent

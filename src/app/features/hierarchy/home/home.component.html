@@ -1,0 +1,24 @@
+<app-hierarchy-child [inputTemplate]="inputTemplate">
+  <app-hierarchy-inspector></app-hierarchy-inspector>
+  <ng-template #tpl>
+    <div name="home-template" appHierarchyInspector #inspector="inspector">
+      <div>&lt;div name="home-template" app-hierarchy-inspector-directive #inspector="inspector"&gt;&lt;div&gt;</div>
+      <div>Emoji: {{inspector?.hierarchyService?.emoji || "None"}}</div>
+    </div>
+    <br />
+  </ng-template>
+</app-hierarchy-child>
+
+<ng-template #inputTemplate>
+  <div name="home-template" appHierarchyInspector #inspector="inspector">
+    <div>&lt;div name="home-template" app-hierarchy-inspector-directive #inspector="inspector"&gt;&lt;div&gt;</div>
+    <div>Emoji: {{inspector?.hierarchyService?.emoji || "None"}}</div>
+  </div>
+  <br />
+</ng-template>
+
+<h3>ngTemplateOutlet tpl</h3>
+<ng-container *ngTemplateOutlet="tpl"></ng-container>
+
+<hr>
+<app-hierarchy-inspector></app-hierarchy-inspector>

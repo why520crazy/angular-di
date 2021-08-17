@@ -25,7 +25,7 @@ import { InspectorComponent } from './inspector/inspector.component';
             }
         ]),
         SharedModule,
-        CoreModule
+        // CoreModule
     ],
     providers: [
     ]
