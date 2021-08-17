@@ -20,7 +20,6 @@ export class UserHomeComponent implements OnInit {
         public rootService: RootService,
         private onlyForUserModuleService: OnlyForUserModuleService
     ) {
-        debugger;
         if (existingClass === sample) {
             this.message = `Inject TOKEN === ExistingClassProviderSample`;
         }

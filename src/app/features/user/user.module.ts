@@ -13,7 +13,8 @@ import { ProtectedResolversModule } from './protected.module';
         Logger,
         {
             provide: TOKEN,
-            useClass: ClassProviderSample
+            useClass: ClassProviderSample,
+            // deps: [ExistingClassProviderSample]
         },
         // {
         //     provide: TOKEN,
@@ -21,7 +22,7 @@ import { ProtectedResolversModule } from './protected.module';
         //         message: 'I am object provider!'
         //     }
         // },
-        // ExistingClassProviderSample,
+        ExistingClassProviderSample,
         // {
         //     provide: TOKEN,
         //     useExisting: ExistingClassProviderSample
@@ -41,7 +42,7 @@ import { ProtectedResolversModule } from './protected.module';
             }
         ]),
         CommonModule,
-        SharedModule,
+        SharedModule
         // CoreModule
     ]
 })

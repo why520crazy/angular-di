@@ -11,6 +11,7 @@ export class Logger {
 
 @Injectable()
 export class ClassProviderSample {
+    constructor() {}
     message = 'I am class provider!';
 }
 

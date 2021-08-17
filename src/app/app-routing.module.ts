@@ -32,7 +32,8 @@ const routes: Routes = [
     {
         path: 'heroes',
         component: HeroListComponent
-    }
+    },
+    { path: 'customers', loadChildren: () => import('./features/customers/customers.module').then(m => m.CustomersModule) }
 ];
 
 @NgModule({
