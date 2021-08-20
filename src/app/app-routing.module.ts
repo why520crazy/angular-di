@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomersComponent } from './features/customers/customers.component';
 import { MultistageHomeComponent } from './features/multistage/home/home.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 
@@ -33,7 +34,11 @@ const routes: Routes = [
         path: 'heroes',
         component: HeroListComponent
     },
-    { path: 'customers', loadChildren: () => import('./features/customers/customers.module').then(m => m.CustomersModule) }
+    { path: 'customers', loadChildren: () => import('./features/customers/customers.module').then((m) => m.CustomersModule) },
+    // {
+    //     path: 'customers',
+    //     component: CustomersComponent
+    // }
 ];
 
 @NgModule({

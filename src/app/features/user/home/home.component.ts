@@ -2,7 +2,16 @@ import { Component, Injectable, Inject, Injector, OnInit, Optional, ViewContaine
 import { Counter } from '../../../core/counter.service';
 import { RootService } from '../../../root.service';
 import { OnlyForUserModuleService } from '../for-user-module.service';
-import { ClassProviderSample, ExistingClassProviderSample, Logger, TOKEN } from '../provider';
+import {
+    ClassProviderSample,
+    ExistingClassProviderSample,
+    Logger,
+    TOKEN,
+    LoggerWithoutInjectable,
+    TOKEN_STR,
+    TOKEN_OBJECT,
+    TOKEN_FACTORY
+} from '../provider';
 
 @Component({
     selector: 'app-user-home',
@@ -15,11 +24,15 @@ export class UserHomeComponent implements OnInit {
     constructor(
         @Inject(TOKEN) public sample: ClassProviderSample,
         @Optional() private existingClass: ExistingClassProviderSample,
-        private injector: Injector,
         public counter: Counter,
         public rootService: RootService,
-        private onlyForUserModuleService: OnlyForUserModuleService
+        public onlyForUserModuleService: OnlyForUserModuleService,
+        public loggerWithoutInjectable: LoggerWithoutInjectable,
+        @Inject(TOKEN_STR) public strValue: string,
+        @Inject(TOKEN_OBJECT) public objectValue: string,
+        @Inject(TOKEN_FACTORY) public tokenFactoryValue: string
     ) {
+        debugger;
         if (existingClass === sample) {
             this.message = `Inject TOKEN === ExistingClassProviderSample`;
         }

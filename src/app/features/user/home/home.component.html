@@ -3,6 +3,21 @@
 <thy-divider thyText="Provider"></thy-divider>
 {{ sample | json }}
 
+<!-- <thy-divider thyText="User Detail Provider"> </thy-divider>
+<app-user-detail></app-user-detail> -->
+
+<thy-divider thyText="str-token Provider"> </thy-divider>
+{{ strValue }}
+
+<thy-divider thyText="object-token Provider"> </thy-divider>
+{{ objectValue }}
+
+<thy-divider thyText="injection-token factory Provider"> </thy-divider>
+{{ tokenFactoryValue }}
+
+<thy-divider thyText="providedIn: UserModule"> </thy-divider>
+{{ onlyForUserModuleService | json }}
+
 <ng-container *ngIf="message">
   <thy-divider thyText="Message"></thy-divider>
   {{ message || 'None' }}
@@ -14,3 +29,7 @@
 <thy-divider thyText="RootService"> </thy-divider>
 
 {{ rootService | json }}
+
+<thy-divider thyText="LoggerWithoutInjectable"> </thy-divider>
+{{ loggerWithoutInjectable | json}}
+

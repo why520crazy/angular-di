@@ -5,6 +5,7 @@ import { HierarchyService } from '../hierarchy.service';
     selector: 'app-hierarchy-child',
     templateUrl: './child.component.html',
     styleUrls: ['./child.component.scss'],
+    viewProviders: [HierarchyService],
     providers: [HierarchyService]
 })
 export class HierarchyChildComponent implements OnInit {
@@ -14,6 +15,5 @@ export class HierarchyChildComponent implements OnInit {
 
     constructor() {}
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void {}
 }

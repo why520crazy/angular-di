@@ -1,8 +1,14 @@
-import { FactoryProvider, Injectable, InjectionToken } from '@angular/core';
+import { FactoryProvider, Injectable, InjectionToken, Inject } from '@angular/core';
 
-// export const TOKEN = new InjectionToken('token');
-export const TOKEN = 'a';
-// export const TOKEN = {};
+export const TOKEN = new InjectionToken('token');
+export const TOKEN_OBJECT = {};
+export const TOKEN_STR = 'str-token';
+export const TOKEN_FACTORY = new InjectionToken('factory-token', {
+    providedIn: 'root',
+    factory: () => {
+        return 'I am from InjectionToken factory';
+    }
+});
 
 @Injectable()
 export class Logger {
@@ -11,7 +17,7 @@ export class Logger {
 
 @Injectable()
 export class ClassProviderSample {
-    constructor() {}
+    constructor(private logger: Logger) {}
     message = 'I am class provider!';
 }
 
@@ -20,9 +26,10 @@ export class ExistingClassProviderSample {
     message = 'I am existing class provider!';
 }
 
+let i = 1;
 export function factoryProviderSample(logger: Logger) {
     return {
-        message: `I am factory provider!, deps logger: ${logger.message}`
+        message: `I am factory provider(${i++})!, deps logger: ${logger.message}`
     };
 }
 
@@ -30,3 +37,8 @@ export function factoryProviderSample(logger: Logger) {
 //     provide: TOKEN,
 //     useFactory: factoryProviderSample
 // };
+
+// @Injectable()
+export class LoggerWithoutInjectable {
+    message = 'I am logger without injectable!';
+}

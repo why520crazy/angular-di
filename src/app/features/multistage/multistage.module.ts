@@ -9,13 +9,23 @@ import { SharedModule } from '../../shared/shared.module';
 import { SelfNoDataComponent } from './self-no-data/self-no-data.component';
 import { SelfComponent } from './self/self.component';
 import { SkipselfComponent } from './skipself/skipself.component';
-import { HostComponent } from './host/host.component';
+import { HostChildComponent, HostComponent } from './host/host.component';
 import { FlowerComponent } from './flower/flower.component';
 import { ChildComponent } from './child/child.component';
 import { InspectorComponent } from './inspector/inspector.component';
 
 @NgModule({
-    declarations: [MultistageHomeComponent, SelfNoDataComponent, SelfComponent, SkipselfComponent, HostComponent, FlowerComponent, ChildComponent, InspectorComponent],
+    declarations: [
+        MultistageHomeComponent,
+        SelfNoDataComponent,
+        SelfComponent,
+        SkipselfComponent,
+        HostComponent,
+        HostChildComponent,
+        FlowerComponent,
+        ChildComponent,
+        InspectorComponent
+    ],
     imports: [
         CommonModule,
         RouterModule.forChild([
@@ -24,10 +34,9 @@ import { InspectorComponent } from './inspector/inspector.component';
                 component: MultistageHomeComponent
             }
         ]),
-        SharedModule,
+        SharedModule
         // CoreModule
     ],
-    providers: [
-    ]
+    providers: []
 })
 export class MultistageModule {}

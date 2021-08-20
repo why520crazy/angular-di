@@ -5,22 +5,16 @@ import { HierarchyHomeComponent } from './home/home.component';
 import { HierarchyChildComponent } from './child/child.component';
 import { HierarchyInspectorComponent, HierarchyInspectorDirective } from './inspector/inspector.component';
 
-
 @NgModule({
-  declarations: [
-    HierarchyHomeComponent,
-    HierarchyChildComponent,
-    HierarchyInspectorComponent,
-    HierarchyInspectorDirective
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-        {
-            path: '',
-            component: HierarchyHomeComponent
-        }
-    ]),
-  ]
+    declarations: [HierarchyHomeComponent, HierarchyChildComponent, HierarchyInspectorComponent, HierarchyInspectorDirective],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([
+            {
+                path: '',
+                component: HierarchyHomeComponent
+            }
+        ])
+    ]
 })
-export class HierarchyModule { }
+export class HierarchyModule {}

@@ -5,5 +5,5 @@ import { ProtectedResolversModule } from './protected.module';
     providedIn: ProtectedResolversModule
 })
 export class OnlyForUserModuleService {
-    name = 'OnlyForUserModuleService';
+    name = 'I am service only for UserModule';
 }
