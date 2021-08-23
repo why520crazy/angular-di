@@ -18,6 +18,8 @@ import { HeroService } from '../hero.service';
 export class HeroListComponent implements OnInit {
     heroes!: Hero[];
 
+    value = "Peter";
+
     constructor(
         private heroService: HeroService,
         private viewContainerRef: ViewContainerRef,
