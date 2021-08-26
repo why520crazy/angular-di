@@ -22,17 +22,11 @@ export class HeroListComponent implements OnInit {
 
     constructor(
         private heroService: HeroService,
-        private viewContainerRef: ViewContainerRef,
-        private elementRef: ElementRef,
         public counter: Counter,
         public rootService: RootService
     ) {}
 
     ngOnInit(): void {
         this.heroes = this.heroService.getHeroes();
-    }
-
-    clear() {
-        this.viewContainerRef.clear();
     }
 }
