@@ -14,10 +14,11 @@ import { SharedModule } from './shared/shared.module';
 import { StaticService } from './static.service';
 import { HeroesModule } from './heroes/heros.module';
 import { AdvanceModule } from './advance/advance.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, CoreModule, AppRoutingModule, SharedModule, AdvanceModule, HeroesModule],
+    imports: [BrowserModule, FormsModule, CoreModule, AppRoutingModule, SharedModule, AdvanceModule, HeroesModule],
     providers: [
         // StaticService,
         // RootService,
