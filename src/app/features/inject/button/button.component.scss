@@ -1,0 +1,13 @@
+:host {
+    padding: 10px 10px;
+
+    &.thy-button-primary {
+        background: #6698ff;
+        color: #fff;
+    }
+
+    &.thy-button-success {
+        background: #73d897;
+        color: #fff;
+    }
+}

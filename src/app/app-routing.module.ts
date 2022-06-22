@@ -35,6 +35,7 @@ const routes: Routes = [
         component: HeroListComponent
     },
     { path: 'customers', loadChildren: () => import('./features/customers/customers.module').then((m) => m.CustomersModule) },
+    { path: 'inject', loadChildren: () => import('./features/inject/inject.module').then((m) => m.InjectModule) },
     // {
     //     path: 'customers',
     //     component: CustomersComponent
